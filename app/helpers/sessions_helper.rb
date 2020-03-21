@@ -23,11 +23,11 @@ module SessionsHelper
   end
 
   def redirect_back_or(default)
-    redirect_to(session[:fowarding]) || default
-    sessiondelete(:forwading_url)
+    redirect_to(session[:forwarding_url] || default)
+    session.delete(:forwading_url)
   end
 
   def store_location
-    session[:fowarding_url] = request.original_url if request.get?
+    session[:forwarding_url] = request.original_url if request.get?
   end
 end
