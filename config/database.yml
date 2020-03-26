@@ -26,6 +26,8 @@ test:
 
 production:
   adapter: postgresql
-  database: my_database_production
   pool: 5
   timeout: 5000
+  username: postgres # 設定したPostgreSQL Accountと同一のもの
+  password: homare0827 # 設定したPostgreSQL Accountと同一のもの
+  host: localhost
